@@ -3,6 +3,8 @@ import random as rand
 import matplotlib.pyplot as plt
 import numpy as np
 import tkinter as tk
+from tkinter import messagebox
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # creates the function that approximates pi given the number of points
 def pi_approximation(num_points):
@@ -30,16 +32,9 @@ start = tk.Button(
     fg="black",
     
 )
-stop = tk.Button(
-    text="Stop",
+reset = tk.Button(
+    text="Reset",
     width=3,
-    height=1,
-    bg="blue",
-    fg="black",
-)
-pause = tk.Button(
-    text="Pause/Resume",
-    width=10,
     height=1,
     bg="blue",
     fg="black",
@@ -50,7 +45,19 @@ entry = tk.Entry(window, width=10)
 
 label.pack()
 start.pack()
-stop.pack()
-pause.pack()
+reset.pack()
 entry.pack()
+
+def start_simulation():
+
+def reset_simulation():
+    window.title("Pi Approximation Simulation using Monte Carlo Method")
+    window.update()  # makes the title text change immediately
+    ax.clear()
+    canvas.draw()
+
+# link buttons to functions
+start.config(command=start_simulation)
+reset.config(command=reset_simulation)
+
 window.mainloop()
