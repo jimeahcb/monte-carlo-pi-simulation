@@ -48,6 +48,12 @@ start.pack()
 reset.pack()
 entry.pack()
 
+# create matplotlib figure to show inside tkinter
+fig, ax = plt.subplots(figsize=(4,4))
+canvas = FigureCanvasTkAgg(fig, master=window)
+canvas.get_tk_widget().pack(pady=10)
+
+# function to start the simulation
 def start_simulation():
 
 def reset_simulation():
