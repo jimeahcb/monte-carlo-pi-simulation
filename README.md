@@ -6,7 +6,7 @@ of π by randomly sampling points and calculating circle-to-square ratios for vi
 HOW TO RUN SIMULATION:
 1. Clone or download this repo:<br>
    A) Open the Terminal (Mac) or Command Prompt (Windows)
-       <br>Change direcotry and go to the folder where you want to save the project.
+       <br>Change directory and go to the folder where you want to save the project.
        <br>Copy and paste this command:
            <br>git clone https://github.com/jimeahcb/monte-carlo-pi-simulation.git<br>
     B) Click the green Code button near the top of this page. <br>
